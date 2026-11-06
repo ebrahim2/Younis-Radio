@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.yonis-radio-volume-range {
+  --yr-progress: 50%;
+  --yr-accent: #78edbe;
+  --yr-track: #39334e;
+  display: block;
+  width: 0;
+  flex: 1 1 0%;
+  min-width: 72px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+  background: transparent;
+  cursor: pointer;
+  touch-action: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.yonis-radio-volume-range:focus-visible {
+  outline: 2px solid var(--yr-accent);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.yonis-radio-volume-range::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--yr-accent) 0 var(--yr-progress), var(--yr-track) var(--yr-progress) 100%);
+}
+
+.yonis-radio-volume-range::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: -5.5px;
+  border: 2px solid var(--yr-accent);
+  border-radius: 50%;
+  background: #f7fff9;
+  box-shadow: 0 0 0 4px rgba(120, 237, 190, .16), 0 2px 12px var(--yr-accent);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.yonis-radio-volume-range::-moz-range-track {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--yr-track);
+}
+
+.yonis-radio-volume-range::-moz-range-progress {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--yr-accent);
+}
+
+.yonis-radio-volume-range::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--yr-accent);
+  border-radius: 50%;
+  background: #f7fff9;
+  box-shadow: 0 0 0 4px rgba(120, 237, 190, .16), 0 2px 12px var(--yr-accent);
+}
